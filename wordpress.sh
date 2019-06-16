@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ipbd1="${IPBD}"
+ipbd="${IPBD}"
 #Instalação de pacotes
 sudo apt -y update
 sudo apt -y install php-curl php-gd php-mbstring php-xml php-xmlrpc apache2 php libapache2-mod-php php-mysql
@@ -43,4 +43,4 @@ sudo mv /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-
 sudo sed -i "s/database_name_here/wordpress/g" /var/www/html/wordpress/wp-config.php
 sudo sed -i "s/username_here/wordadm/g" /var/www/html/wordpress/wp-config.php 
 sudo sed -i "s/password_here/wordpress/g" /var/www/html/wordpress/wp-config.php
-sudo sed -i "s/localhost/$ipbd1/g" /var/www/html/wordpress/wp-config.php
+sudo sed -i "s/localhost/$ipbd/g" /var/www/html/wordpress/wp-config.php
